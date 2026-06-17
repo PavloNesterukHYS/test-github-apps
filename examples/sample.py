@@ -12,3 +12,8 @@ def greet(name: str) -> str:
 def add(a: int, b: int) -> int:
     """Add two numbers."""
     return a + b
+
+
+def divide(a: int, b: int) -> int:
+    """Add two numbers."""
+    return a + b
