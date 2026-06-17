@@ -1,0 +1,12 @@
+# Added by code-review-graph
+.code-review-graph/
+
+# Secrets & local config
+.env
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
