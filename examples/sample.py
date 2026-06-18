@@ -14,6 +14,6 @@ def add(a: int, b: int) -> int:
     return a + b
 
 
-def divide(a: int, b: int) -> int:
-    """Add two numbers."""
-    return a + b
+def divide(a: int, b: int) -> float:
+    """Divide the first number by the second."""
+    return a / b
