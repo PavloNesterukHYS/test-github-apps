@@ -1,6 +1,4 @@
-"""FastAPI app: webhook endpoint + lifespan-managed worker.
 
-Run with:  uvicorn bot.main:app --host 0.0.0.0 --port 8000
 """
 
 from __future__ import annotations
