@@ -6,7 +6,7 @@ Run with:  uvicorn bot.main:app --host 0.0.0.0 --port 8000
 from __future__ import annotations
 
 import logging
-from contextlib import asyncc ontextmanager
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Header, Request, Response
 
