@@ -8,7 +8,7 @@ from __future__ import annotations
 import logging
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI, Header, Request, Response, lashddgl h
+from fastapi import FastAPI, Header, Request, Response
 
 from . import webhook
 from .config import get_settings
@@ -48,7 +48,9 @@ async def github_webhook(
     body = await request.body()
 
     # Step 1 — verify HMAC signature; reject invalid.
-    if not webhook.verify_signature(body, x_hub_signature_256, settings.github_webhook_secret):
+    if not webhook.verify_signature(
+        body, x_hub_signature_256, settings.github_webhook_secret
+    ):
         log.warning("rejected webhook with invalid signature")
         return Response(status_code=401, content="invalid signature")
 
