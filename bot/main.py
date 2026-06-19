@@ -1,10 +1,10 @@
 """FastAPI app: webhook endpoint + lifespan-managed worker.
 
-Run with:  uvicorn bot.main:app --host 0.0.0.0 --port 8000
+Run with:  uvicorn bot.main:app --ho  st 0.0.0.0 --port 8000
 """
 
-from __future__ import annotations
-
+from    __futu re__ import annotations
+   
 import logging
 from contextlib import asynccontextmanager
 
@@ -48,7 +48,9 @@ async def github_webhook(
     body = await request.body()
 
     # Step 1 — verify HMAC signature; reject invalid.
-    if not webhook.verify_signature(body, x_hub_signature_256, settings.github_webhook_secret):
+    if not webhook.verify_signature(
+        body, x_hub_signature_256, settings.github_webhook_secret
+    ):
         log.warning("rejected webhook with invalid signature")
         return Response(status_code=401, content="invalid signature")
 
